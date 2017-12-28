@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mundo das Coxinhas</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+    <link rel="icon" href="/images/logoPequeno.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row" id="pwd-container">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+          <section class="login-form">
+            <form method="post" action="/logar" role="login">
+              <img src="/images/logoPequeno.png" class="img-responsive" alt="" />
+              <h5> Área Administrativa </h5>
+
+            <%if (msgUsuarioSenhaErrada  != null) { %>
+              <div class="alert alert-warning">
+                <strong><%= msgUsuarioSenhaErrada %></strong>
+              </div>
+            <% } %>
+
+              <input type="email" name="email" placeholder="Email" required class="form-control input-lg"  required= "true"/>
+              <input type="password" name = "password" class="form-control input-lg"  placeholder="Password" required="true" />
+              <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Entrar</button>
+            </form>
+          </section>
+          </div>
+
+          <div class="col-md-4"></div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
