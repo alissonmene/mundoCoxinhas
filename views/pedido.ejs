@@ -11,7 +11,13 @@
 
 <main>
 
-  <button class="btn btn-primary" type="submit">Novo Pedido</button>
+
+
+  <div class="d-flex flex-row-reverse">
+      <div class="p-2">  <button class="btn btn-primary" type="submit" >Alterar Pedido</button></div>
+      <div class="p-2"> <button class="btn btn-primary" type="submit">Novo Pedido</button></div>
+  </div>
+
 
       <table class="table table-striped">
         <div class="btn-group" data-toggle="buttons">
@@ -45,6 +51,7 @@
         </tbody>
         </div>
       </table>
+
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-end">
           <li class="page-item disabled">
@@ -58,14 +65,12 @@
           </li>
         </ul>
       </nav>
-
-      <button class="btn btn-primary" type="submit" >Alterar Pedido</button>
-
 </main>
 
 <footer class = "footer">
     <% include ../template/footer %>
 </footer>
 
+ </script>
 </body>
 </html>

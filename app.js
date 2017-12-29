@@ -38,11 +38,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 var auth = function(req, res, next) {
-  if (req.session.administrador != null )
+  if (req.session.administrador != null ){
+      res.locals.administrador = req.session.administrador;
     return next();
-  else
+  } else
     res.render('index', {
       msgUsuarioSenhaErrada : null
+
     });
   };
 
