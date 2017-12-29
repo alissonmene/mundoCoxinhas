@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <% include ../template/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../template/header %>
+</header>
+
+<main>
+
+
+  <div class="text-right">
+      <a class="btn btn-primary" href="/administrador/add" role="button">Novo</a>
+      <button class="btn btn-primary" type="submit">Alterar</button>
+  </div>
+      <table class="table table-striped">
+        <div class="btn-group" data-toggle="buttons">
+        <thead>
+          <tr>
+            <th scope="col">X</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Unidade</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% listaAdmi.forEach(function(adm) { %>
+              <tr>
+                <td> <input type="radio" name="options" value = '<%= adm.id_administrador %>' autocomplete="off"> </td>
+                <td><%= adm.nome %></td>
+                <td><%= adm.descricao %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+        </div>
+      </table>
+  </main>
+
+<footer class = "footer">
+    <% include ../template/footer %>
+</footer>
+</body>
+</html>

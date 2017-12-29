@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <% include ../template/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../template/header %>
+</header>
+
+    <form action= '/administrador/add' method="post">
+      <div class="form-group">
+         <label for="nome">Nome:</label>
+         <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" required=true>
+       </div>
+       <div class="form-group">
+          <label for="email">Email:</label>
+          <input required=true  name="email" type="email" class="form-control" id="email" placeholder="Email">
+       </div>
+         <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha" required=true>
+        </div>
+
+        <div class="form-group">
+           <label for="inlineFormCustomSelect">Unidades:</label>
+           <select class="custom-select mr-sm-2" name="unidade" id="inlineFormCustomSelect" required=true>
+             <% unidades.forEach(function(unidade) { %>
+               <option value = "<%= unidade.id_unidade %>" ><%= unidade.descricao %></option>
+              <% }); %>
+            </select>
+        </div>
+
+        <div class="text-right">
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </div>
+      </form>
+  </main>
+
+<footer class = "footer">
+    <% include ../template/footer %>
+</footer>
+</body>
+</html>
